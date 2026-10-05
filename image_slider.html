@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nitte Image Slider</title>
+    
+</head>
+<body>
+    <h2>Nitte Image Slider</h2>
+    <img id="image" src="image1.jpg">
+    <br>
+    <button onclick="previous()">Previous</button>
+    <button onclick="next()">Next</button>
+<script>
+    let images= ["image1.jpg","image2.jpg","image3.jpg"];
+    let i = 0;
+    function next(){
+        i++;
+        if(i== images.length){
+            i=0;
+        }
+        document.getElementById("image").src=images[i];
+    }
+    function previous(){
+        i--;
+        if(i<0){
+            i=image.lenght-1;
+        }
+        
+        document.getElementById("image").src=images[i-1];
+    }
+    setInterval(next,3000);
+</script>
+    
+</body>
+</html>
